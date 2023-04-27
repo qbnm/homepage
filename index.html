@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="" crossorigin="anonymous"/>
+
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: Muli, Arial, Helvetica, Helvetica Neue, sans-serif;
+            font-weight: 400;
+            color: #444444;
+            font-size: 18px;
+            line-height: 28px;
+            background-color: #f6f6f6;
+        }
+
+        .container {
+            position: absolute;
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .content {
+            width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            display: table-row;
+            height: 50px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #444444;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 60px;
+            margin: 0 0 10px;
+        }
+
+        img {
+            max-width: 100%;
+            margin: 25px 0;
+        }
+
+        a {
+            color: #777777;
+            text-decoration: none;
+        }
+
+        a.underline {
+            border-bottom: 1px solid #777777;
+            padding-bottom: 1px;
+        }
+
+        pre {
+            border: 1px dashed #ccc;
+            padding: 30px;
+            color: #555;
+        }
+
+        .links {
+            margin-top: 40px;
+        }
+
+        .links a {
+            margin: 15px;
+            font-size: 26px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .content {
+                width: 600px;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            .content {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            h1 {
+                font-size: 40px;
+                line-height: 50px;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        // source: https://stackoverflow.com/a/9194490
+        function UnCryptMailto (string) {
+            var n = 0;
+            var r = "";
+            for (var i = 0; i < string.length; i++) {
+                n = string.charCodeAt(i);
+                if (n >= 8364) {
+                    n = 128;
+                }
+                r += String.fromCharCode(n - 1);
+            }
+            return r;
+        }
+
+        function linkTo_UnCryptMailto (s) {
+            location.href = UnCryptMailto(s);
+        }
+    </script>
+
+    <noscript>
+        <style>
+            #content {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <title>Dimitri Banchevski - Software Engineering</title>
+</head>
+<body>
+<header></header>
+<div class="container">
+    <div class="main">
+        <div class="content" id="content" style="display: none;">
+            Dimitri Banchevski<br>
+            Lister Str. 31<br>
+            30163 Hannover<br>
+            <a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAxfc.rc/dpn');">info [at] web-qb [dot] com</a><br>
+            <a href="tel:+4915120474500">+4915120474500</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="bottomLink" style="display: none;"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function addImprint () {
+        document.getElementById('content').innerHTML = 'Dimitri Banchevski<br>' +
+            'Lister Str. 31<br>' +
+            '30163 Hannover<br>' +
+            '<a href="javascript:linkTo_UnCryptMailto(\'nbjmup;jogpAxfc.rc/dpn\');">info [at] web-qb [dot] com</a><br><br>' +
+            '<a href="tel:+4915120474500">+4915120474500</a>';
+        document.getElementById('bottomLink').innerHTML =
+            '<a href="javascript:addMainContent();" class="underline" id="bottomLink">&#x2190; zurück</a>';
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('bottomLink').style.display = 'block';
+    }
+
+    function addMainContent () {
+        document.getElementById('content').innerHTML = '<h1>Dimitri Banchevski</h1>\n' +
+            '<h2>Software Engineer (B.A.)</h2>\n' +
+            '<p>TYPO3 / Magento <br> PHP Development</p>\n' +
+            '<div class="links">\n' +
+            '<a href="https://www.xing.com/profile/Dimitri_Banchevski/"><i class="fab fa-xing-square"></i></a>\n' +
+            '<a href="https://www.linkedin.com/in/dimitri-banchevski-27790158/"><i class="fab fa-linkedin"></i></a>\n' +
+            '<a href="https://github.com/qbnm/"><i class="fab fa-github-square"></i></a>\n' +
+            '<a href="javascript:linkTo_UnCryptMailto(\'nbjmup;jogpAxfc.rc/dpn\');"><i class="fas fa-envelope-square"></i></a>\n' +
+            '</div>';
+        document.getElementById('bottomLink').innerHTML =
+            '<a href="javascript:addImprint();" class="underline" id="bottomLink">Impressum</a>';
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('bottomLink').style.display = 'block';
+    }
+
+    (function () {
+        addMainContent();
+    })();
+</script>
+</body>
+</html>
